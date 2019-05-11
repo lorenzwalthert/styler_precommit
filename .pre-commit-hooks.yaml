@@ -1,0 +1,6 @@
+-   id: style-files
+    name: style files
+    description: Styles files with styler
+    entry: style-files
+    language: python
+    files: ['.R$']
