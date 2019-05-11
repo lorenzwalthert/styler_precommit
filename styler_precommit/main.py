@@ -8,10 +8,10 @@ def main(argv=None):  # type: (Optional[Sequence[str]]) -> int
         help='Filenames pre-commit believes are changed.',
     )
     args = parser.parse_args(argv)
-    files = "'" + "".join(args.filenames) + "'"
+    files = "'" + "', '".join(args.filenames) + "'"
     if (len(files) > 0):
-        subprocess.call(['Rscript', '--no-init-file', '-e', f'styler::style_file({files})'], stdout=open(os.devnull, 'wb'))
-    return
+        subprocess.call(['Rscript', '--no-init-file', '-e', 'styler::style_file(' + files + ')'] , stdout=open(os.devnull, 'wb'))
+
 
 if __name__ == '__main__':
     exit(main())
