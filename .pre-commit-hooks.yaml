@@ -3,4 +3,4 @@
     description: Styles files with styler
     entry: style-files
     language: python
-    files: '\.R$'
+    files: '(\.R|\.Rmd|\.Rnw|\.r|\.rmd|\.rnw)$'
